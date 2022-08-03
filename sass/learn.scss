@@ -1,0 +1,159 @@
+//1. Sass Modules (import others scss file)
+@use "sass:math";
+@use "./components/header";
+@use "./components/navbar";
+
+//2. Sass @debug Rule ( Like console.log() )
+$a: 10;
+$b: 20;
+@debug $b;
+@debug "the sum of #{$a + $b}";
+
+//3. sass vs Scss (scss file name must be .scss and sass file name must be .sass)
+
+//scss code =>
+.sujon {
+  background-color: aqua;
+}
+
+//scss code => (not run resion file name not .sass)
+/*
+.sujon
+ background-color: aqua;
+ */
+
+//4. What are Sass Variables
+$padding: 20px;
+
+.name {
+  padding: $padding;
+}
+
+//5.Access Sass Variables in Sass Modules
+
+/*
+@use "./abstracts/variables";
+@use "./abstracts/variables" as color;
+@use "./abstracts/variables" as *;
+.name {
+  color: variables.$indigo;
+}
+
+.name {
+  color: color.$indigo;
+}
+
+.name {
+  color: $indigo;
+}
+*/
+
+//6. Sass Nesting
+nav {
+  background-color: indigo;
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style-type: none;
+      a {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+//7. BEM Methodology
+.__nav {
+  &__ul {
+    &__li {
+      &__link {
+        color: aqua;
+      }
+    }
+  }
+}
+
+//7. Sass Lists
+$colors: ("indigo", "red", "blue", "black");
+
+@each $color in $colors {
+  .color-#{$color} {
+    color: #{$color};
+  }
+}
+
+//7. Sass Maps
+$fontWeights: (
+  "Thin": 100,
+  "Light": 300,
+  "Regular": 400,
+  "Medium": 500,
+  "SemiBold": 600,
+  "Bold": 700,
+  "Black": 900,
+);
+
+@debug map-get($fontWeights, "Thin");
+
+@each $key, $value in $fontWeights {
+  .font-#{$key} {
+    font-weight: $value;
+  }
+}
+
+//8. Sass For Loop
+@for $i from 1 through 20 {
+  .font-size-#{$i} {
+    font-size: "#{$i}px";
+  }
+}
+
+//9. Sass If Else
+$fontWeight: "semibold";
+
+.navbar {
+  color: red;
+  @if $fontWeight == "Medium" {
+    font-weight: 500;
+  } @else if $fontWeight == "bold" {
+    font-weight: 700;
+  } @else {
+    font-weight: 400;
+  }
+}
+
+//9. Sass Function
+@function grid($number) {
+  @return math.div(100%, 12) * $number;
+}
+
+.col-5 {
+  width: grid(5);
+}
+
+//10. Sass Extends
+.alert {
+  padding: 10px;
+}
+
+.alert-success {
+  @extend .alert;
+}
+
+%toast {
+  padding: 100px;
+}
+
+.error-toast {
+  @extend %toast;
+}
+
+//11. Sass Mixins
+@mixin toastMsg($color: "red") {
+  background-color: $color;
+}
+
+.toastMsg-success {
+  @include toastMsg();
+}

@@ -1,0 +1,331 @@
+header {
+  background-color: indigo;
+  color: white;
+}
+
+nav {
+  background: orange;
+  color: white;
+}
+
+.sujon {
+  background-color: aqua;
+}
+
+/*
+.sujon
+ background-color: aqua;
+ */
+.name {
+  padding: 20px;
+}
+
+/*
+@use "./abstracts/variables";
+@use "./abstracts/variables" as color;
+@use "./abstracts/variables" as *;
+.name {
+  color: variables.$indigo;
+}
+
+.name {
+  color: color.$indigo;
+}
+
+.name {
+  color: $indigo;
+}
+*/
+nav {
+  background-color: indigo;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  list-style-type: none;
+}
+nav ul li a {
+  display: inline-block;
+}
+
+.__nav__ul__li__link {
+  color: aqua;
+}
+
+.color-indigo {
+  color: indigo;
+}
+
+.color-red {
+  color: red;
+}
+
+.color-blue {
+  color: blue;
+}
+
+.color-black {
+  color: black;
+}
+
+.font-Thin {
+  font-weight: 100;
+}
+
+.font-Light {
+  font-weight: 300;
+}
+
+.font-Regular {
+  font-weight: 400;
+}
+
+.font-Medium {
+  font-weight: 500;
+}
+
+.font-SemiBold {
+  font-weight: 600;
+}
+
+.font-Bold {
+  font-weight: 700;
+}
+
+.font-Black {
+  font-weight: 900;
+}
+
+.font-size-1 {
+  font-size: "1px";
+}
+
+.font-size-2 {
+  font-size: "2px";
+}
+
+.font-size-3 {
+  font-size: "3px";
+}
+
+.font-size-4 {
+  font-size: "4px";
+}
+
+.font-size-5 {
+  font-size: "5px";
+}
+
+.font-size-6 {
+  font-size: "6px";
+}
+
+.font-size-7 {
+  font-size: "7px";
+}
+
+.font-size-8 {
+  font-size: "8px";
+}
+
+.font-size-9 {
+  font-size: "9px";
+}
+
+.font-size-10 {
+  font-size: "10px";
+}
+
+.font-size-11 {
+  font-size: "11px";
+}
+
+.font-size-12 {
+  font-size: "12px";
+}
+
+.font-size-13 {
+  font-size: "13px";
+}
+
+.font-size-14 {
+  font-size: "14px";
+}
+
+.font-size-15 {
+  font-size: "15px";
+}
+
+.font-size-16 {
+  font-size: "16px";
+}
+
+.font-size-17 {
+  font-size: "17px";
+}
+
+.font-size-18 {
+  font-size: "18px";
+}
+
+.font-size-19 {
+  font-size: "19px";
+}
+
+.font-size-20 {
+  font-size: "20px";
+}
+
+.navbar {
+  color: red;
+  font-weight: 400;
+}
+
+.col-5 {
+  width: 41.6666666667%;
+}
+
+.alert, .alert-success {
+  padding: 10px;
+}
+
+.error-toast {
+  padding: 100px;
+}
+
+.toastMsg-success {
+  background-color: "red";
+}
+
+.fontSize-1 {
+  font-size: 1px;
+}
+
+.fontSize-2 {
+  font-size: 2px;
+}
+
+.fontSize-3 {
+  font-size: 3px;
+}
+
+.fontSize-4 {
+  font-size: 4px;
+}
+
+.fontSize-5 {
+  font-size: 5px;
+}
+
+.fontSize-6 {
+  font-size: 6px;
+}
+
+.fontSize-7 {
+  font-size: 7px;
+}
+
+.fontSize-8 {
+  font-size: 8px;
+}
+
+.fontSize-9 {
+  font-size: 9px;
+}
+
+.fontSize-10 {
+  font-size: 10px;
+}
+
+.fontSize-11 {
+  font-size: 11px;
+}
+
+.fontSize-12 {
+  font-size: 12px;
+}
+
+.fontSize-13 {
+  font-size: 13px;
+}
+
+.fontSize-14 {
+  font-size: 14px;
+}
+
+.fontSize-15 {
+  font-size: 15px;
+}
+
+.fontSize-16 {
+  font-size: 16px;
+}
+
+.fontSize-17 {
+  font-size: 17px;
+}
+
+.fontSize-18 {
+  font-size: 18px;
+}
+
+.fontSize-19 {
+  font-size: 19px;
+}
+
+.fontSize-20 {
+  font-size: 20px;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-bold {
+  font-weight: 500;
+}
+
+.font-extraBold {
+  font-weight: 600;
+}
+
+.color-orange {
+  background: orange;
+}
+
+.color-green {
+  background: green;
+}
+
+.color-red {
+  background: red;
+}
+
+.color-blue {
+  background: blue;
+}
+
+.nav {
+  width: 100%;
+  height: 80px;
+  background: orange;
+  line-height: 80px;
+}
+.nav__ul {
+  list-style: none;
+}
+.nav__ul__li {
+  display: inline-block;
+}
+.nav__ul__li__a {
+  text-decoration: none;
+  color: white;
+}
+.nav__ul__li__a--red {
+  color: red;
+}
+.nav__ul__li__a--indigo {
+  color: indigo;
+}
